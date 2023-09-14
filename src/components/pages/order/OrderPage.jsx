@@ -1,14 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function OrderPage() {
-
-    const navigateToLogin = () => {
-        window.location.href = "/";
-    };
   return (
     <div>
         <h1>Bonjour</h1>
-        <button onClick={navigateToLogin}>Retour</button>
+        <Link to="/"><button>Déconnexion</button></Link>
     </div>
   )
 }
