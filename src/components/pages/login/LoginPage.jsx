@@ -11,7 +11,7 @@ export default function LoginPage() {
   );
 }
 
-//style
+// styledComponents
 const LoginPageStyled = styled.div`
   height: 100vh;
   display: flex;
