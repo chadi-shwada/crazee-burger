@@ -11,11 +11,16 @@ export default function LoginPage() {
   );
 }
 
+//style
 const LoginPageStyled = styled.div`
-  background: red;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  //style for image background
+  background: url("/images/burger-background.jpg") fixed center/cover
+    rgba(0, 0, 0, 0.7);
+  background-blend-mode: darken;
 `;
