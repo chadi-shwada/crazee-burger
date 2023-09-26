@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { theme } from "../../../theme";
 import { IoChevronForwardCircle } from "react-icons/io5";
 import { BsPersonCircle } from "react-icons/bs";
-import Input from "../../reusabel-ui/Input";
+import TextInput from "../../reusabel-ui/TextInput";
 
 export default function LoginForm() {
   // state
@@ -28,7 +28,7 @@ export default function LoginForm() {
       <h1>Bienvenue chez nous !</h1>
       <hr />
       <h2>Connectez-vous</h2>
-      <Input
+      <TextInput
         value={username}
         onChange={handleChange}
         placeholder={"Entrez votre prénom"}
