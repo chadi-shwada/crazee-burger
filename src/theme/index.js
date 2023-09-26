@@ -16,6 +16,7 @@ const colors = {
     greySemiDark: "#93a2b1",
     greyDark: "#6f737e",
     greyBlue: "#747b91",
+    tomato: "#f56a2c"
   }
   
   const spacing = {
@@ -29,17 +30,24 @@ const colors = {
   }
   
   const fonts = {
-    XXXS: "8px",
-    XXS: "10px",
-    XS: "12px",
-    P0: "15px",
-    P1: "18px",
-    P2: "20px",
-    P3: "24px",
-    P4: "36px",
-    P5: "48px",
-    P6: "60px",
+    size: {
+      XXXS: "8px",
+      XXS: "10px",
+      XS: "12px",
+      SM: "15px",
+      P0: "16px",
+      P1: "18px",
+      P2: "20px",
+      P3: "24px",
+      P4: "36px",
+      P5: "48px",
+      P6: "60px",
+    },
+    families: {
+      stylish : `"Amatic SC", cursive`
+    }
   }
+
   const gridUnit = 8
   const borderRadius = {
     subtle: 1,

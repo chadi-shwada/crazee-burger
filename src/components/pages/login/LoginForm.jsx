@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "../../../theme";
-import { BsPersonCircle } from "react-icons/bs";
 import { IoChevronForwardCircle } from "react-icons/io5";
+import { BsPersonCircle } from "react-icons/bs";
+import Input from "../../reusabel-ui/Input";
 
 export default function LoginForm() {
   // state
@@ -26,21 +27,15 @@ export default function LoginForm() {
     <LoginFormStyled action="submit" onSubmit={handleSubmit}>
       <h1>Bienvenue chez nous !</h1>
       <hr />
-      <br />
       <h2>Connectez-vous</h2>
-
-      <div className="input-with-icon">
-        <BsPersonCircle className="icon" />
-        <input
-          required
-          value={username}
-          onChange={handleChange}
-          type="text"
-          placeholder="Entrez votre prénom"
-        />
-      </div>
-
-      <button className="btn-with-icon">
+      <Input
+        value={username}
+        onChange={handleChange}
+        placeholder={"Entrez votre prénom"}
+        required
+        Icon={<BsPersonCircle className="icon" />}
+      />
+      <button className="button-with-icon">
         <span>Accéder à votre espace</span>
         <IoChevronForwardCircle className="icon" />
       </button>
@@ -50,7 +45,7 @@ export default function LoginForm() {
 
 // styledComponents
 const LoginFormStyled = styled.form`
-  font-family: "Amatic SC", cursive;
+  font-family: ${theme.fonts.families.stylish};
   max-width: 500px;
   min-width: 400px;
   text-align: center;
@@ -70,40 +65,11 @@ const LoginFormStyled = styled.form`
   }
 
   hr {
-    border: 1.5px solid ${theme.colors.primary};
+    border: 1.5px solid ${theme.colors.tomato};
     margin-bottom: 40px;
   }
-
-  // style for input
-  .input-with-icon {
-    background-color: #fff;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    padding: 18px 24px;
-    margin: 18px 0;
-
-    .icon {
-      font-size: 15px;
-      margin-right: 8px;
-      color: #93a2b1;
-    }
-
-    input {
-      border: none;
-      font-size: 15px;
-      color: #17161a;
-      width: 100%;
-    }
-
-    &::placeholder {
-      background: white;
-      color: lightgrey;
-    }
-  }
-
   // style for button
-  .btn-with-icon {
+  .button-with-icon {
     background-color: ${theme.colors.primary};
     border-radius: 5px;
     align-items: center;
