@@ -45,6 +45,14 @@ const colors = {
     },
     families: {
       stylish : `"Amatic SC", cursive`
+    },
+    weights: {
+      light: 300,
+      regular: 400,
+      medium: 500,
+      semiBold: 600,
+      bold: 700,
+      heavy: 800,
     }
   }
 
@@ -56,14 +64,7 @@ const colors = {
     circle: "50%",
   }
   const shadows = {}
-  const weights = {
-    light: 300,
-    regular: 400,
-    medium: 500,
-    semiBold: 600,
-    bold: 700,
-    heavy: 800,
-  }
+
   
   export const theme = {
     colors,
@@ -71,7 +72,6 @@ const colors = {
     gridUnit,
     borderRadius,
     shadows,
-    weights,
     spacing,
   }
   

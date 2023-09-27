@@ -20,12 +20,15 @@ const LogoStyled = styled.div`
 
   //style for title
   h1 {
-    font-family: "Amatic SC", cursive;
+    display: flex;
+    font-family: ${theme.fonts.families.stylish};
     text-align: center;
-    font-size: 36px;
+    font-size: ${theme.fonts.P4};
     letter-spacing: 1.5px;
     line-height: 1em;
+    font-weight: ${theme.fonts.weights.bold};
     color: ${theme.colors.primary};
+    text-transform: uppercase;
   }
 
   //style for logo
@@ -34,6 +37,6 @@ const LogoStyled = styled.div`
     object-position: center;
     height: 60px;
     width: 80px;
-    margin: 5px;
+    margin: 0 ${theme.gridUnit / 2}px;
   }
 `;

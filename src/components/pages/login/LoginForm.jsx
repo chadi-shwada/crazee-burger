@@ -54,29 +54,30 @@ const LoginFormStyled = styled.form`
   text-align: center;
   margin: 0px auto;
   text-align: center;
-  padding: 2.5rem 2rem;
+  padding: 40px ${theme.spacing.lg};
+  border-radius: ${theme.borderRadius.round};
 
   h1 {
-    color: white;
-    font-size: 50px;
+    color: ${theme.colors.white};
+    font-size: ${theme.fonts.size.P5};
   }
 
   h2 {
-    color: white;
-    font-size: 40px;
+    color: ${theme.colors.white};
+    font-size: ${theme.fonts.size.P4};
     margin: 20px 10px 10px;
   }
 
   hr {
     border: 1.5px solid ${theme.colors.tomato};
-    margin-bottom: 40px;
+    margin-bottom: ${theme.gridUnit * 5}px;
   }
   // style for icon
   .icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 15px;
+    font-size: ${theme.fonts.size.P0};
     margin-left: 10px;
   }
 `;
