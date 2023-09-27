@@ -3,14 +3,14 @@ import { theme } from "../../theme";
 
 export default function TextInput({ value, onChange, Icon, ...otherProps }) {
   return (
-    <InputStyled>
+    <TextInputStyled>
       {Icon && Icon}
-      <input value={value} onChange={value} type="text" {...otherProps} />
-    </InputStyled>
+      <input value={value} onChange={onChange} type="text" {...otherProps} />
+    </TextInputStyled>
   );
 }
 
-const InputStyled = styled.div`
+const TextInputStyled = styled.div`
   background-color: ${theme.colors.white};
   border-radius: ${theme.borderRadius.round};
   display: flex;
