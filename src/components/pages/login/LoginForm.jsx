@@ -5,6 +5,7 @@ import { theme } from "../../../theme";
 import { IoChevronForwardCircle } from "react-icons/io5";
 import { BsPersonCircle } from "react-icons/bs";
 import TextInput from "../../reusabel-ui/TextInput";
+import PrimaryButton from "../../reusabel-ui/PrimaryButton";
 
 export default function LoginForm() {
   // state
@@ -28,6 +29,7 @@ export default function LoginForm() {
       <h1>Bienvenue chez nous !</h1>
       <hr />
       <h2>Connectez-vous</h2>
+
       <TextInput
         value={username}
         onChange={handleChange}
@@ -35,10 +37,11 @@ export default function LoginForm() {
         required
         Icon={<BsPersonCircle className="icon" />}
       />
-      <button className="button-with-icon">
-        <span>Accéder à votre espace</span>
-        <IoChevronForwardCircle className="icon" />
-      </button>
+
+      <PrimaryButton
+        label={"Accéder à votre espace"}
+        Icon={<IoChevronForwardCircle className={"icon"} />}
+      />
     </LoginFormStyled>
   );
 }
@@ -68,48 +71,12 @@ const LoginFormStyled = styled.form`
     border: 1.5px solid ${theme.colors.tomato};
     margin-bottom: 40px;
   }
-  // style for button
-  .button-with-icon {
-    background-color: ${theme.colors.primary};
-    border-radius: 5px;
-    align-items: center;
-    padding: 18px 24px;
-    font-size: 15px;
-    font-weight: 800;
-    width: 100%;
-    color: white;
-    display: inline-flex;
+  // style for icon
+  .icon {
+    display: flex;
     justify-content: center;
-    position: relative;
-    text-decoration: none;
-    line-height: 1;
-    border: 1px solid ${theme.colors.primary};
-    white-space: nowrap;
-
-    &:hover:not(:disabled) {
-      background-color: white;
-      color: ${theme.colors.primary};
-      border: 1px solid ${theme.colors.primary};
-      transition: all 200ms ease-out;
-    }
-
-    &:active {
-      color: white;
-      background-color: ${theme.colors.primary};
-      border: ${theme.colors.primary};
-    }
-
-    &:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
-
-    .icon {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 15px;
-      margin-left: 10px;
-    }
+    align-items: center;
+    font-size: 15px;
+    margin-left: 10px;
   }
 `;
