@@ -4,8 +4,8 @@ import styled from "styled-components";
 import { theme } from "../../../theme";
 import { IoChevronForwardCircle } from "react-icons/io5";
 import { BsPersonCircle } from "react-icons/bs";
-import TextInput from "../../reusabel-ui/TextInput";
-import PrimaryButton from "../../reusabel-ui/PrimaryButton";
+import TextInput from "../../reusable-ui/TextInput";
+import PrimaryButton from "../../reusable-ui/PrimaryButton";
 
 export default function LoginForm() {
   // state
