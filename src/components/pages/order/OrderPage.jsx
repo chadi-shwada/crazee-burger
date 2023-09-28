@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { styled } from "styled-components";
 import { theme } from "../../../theme";
 import Navbar from "./Navbar";
+import Main from "./Main";
 
 export default function OrderPage() {
   //state
@@ -15,7 +16,7 @@ export default function OrderPage() {
     <OrderPageStyled>
       <div className="container">
         <Navbar username={username} />
-        <div className="main">main</div>
+        <Main />
       </div>
     </OrderPageStyled>
   );
@@ -33,10 +34,5 @@ const OrderPageStyled = styled.div`
     background: lightblue;
     height: 95vh;
     width: 1400px;
-  }
-  .main {
-    border: 3px solid red;
-    height: 85vh;
-    background-color: blue;
   }
 `;
