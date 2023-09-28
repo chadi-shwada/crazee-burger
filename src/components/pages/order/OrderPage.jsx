@@ -12,10 +12,12 @@ export default function OrderPage() {
   // affichage (render)
   return (
     <OrderPageStyled>
-      <span>Bonjour {username}</span>
-      <Link to="/">
-        <button>Déconnexion</button>
-      </Link>
+      <div className="container">
+        <span>Bonjour {username}</span>
+        <Link to="/">
+          <button>Déconnexion</button>
+        </Link>
+      </div>
     </OrderPageStyled>
   );
 }
@@ -23,4 +25,14 @@ export default function OrderPage() {
 const OrderPageStyled = styled.div`
   background-color: ${theme.colors.primary};
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    border: 3px solid lightblue;
+    background: lightblue;
+    height: 95vh;
+    width: 1400px;
+  }
 `;
