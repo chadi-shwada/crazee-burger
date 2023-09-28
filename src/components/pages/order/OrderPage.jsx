@@ -1,5 +1,7 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
+import { styled } from "styled-components";
+import { theme } from "../../../theme";
 
 export default function OrderPage() {
   //state
@@ -9,11 +11,16 @@ export default function OrderPage() {
 
   // affichage (render)
   return (
-    <div>
-      <h1>Bonjour {username}</h1>
+    <OrderPageStyled>
+      <span>Bonjour {username}</span>
       <Link to="/">
         <button>Déconnexion</button>
       </Link>
-    </div>
+    </OrderPageStyled>
   );
 }
+
+const OrderPageStyled = styled.div`
+  background-color: ${theme.colors.primary};
+  height: 100vh;
+`;
