@@ -5,7 +5,7 @@ import styled from "styled-components";
 export default function LoginPage() {
   return (
     <LoginPageStyled>
-      <Logo />
+      <Logo className={"logo-login"} />
       <LoginForm />
     </LoginPageStyled>
   );
@@ -23,4 +23,8 @@ const LoginPageStyled = styled.div`
   background: url("/images/burger-background.jpg") fixed center/cover
     rgba(0, 0, 0, 0.7);
   background-blend-mode: darken;
+
+  .logo-login {
+    transform: scale(2.5);
+  }
 `;

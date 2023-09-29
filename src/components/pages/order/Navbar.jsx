@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
-
+import Logo from "../../reusable-ui/Logo";
 export default function Navbar({ username }) {
   return (
     <NavbarStyled>
-      <div className="logo">LOGO</div>
+      <Logo />
       <div className="profile">
         <span>Bonjour {username}</span>
         <Link to="/">
