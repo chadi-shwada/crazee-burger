@@ -30,8 +30,6 @@ const OrderPageStyled = styled.div`
   align-items: center;
 
   .container {
-    border: 3px solid lightblue;
-    background: lightblue;
     height: 95vh;
     width: 1400px;
   }

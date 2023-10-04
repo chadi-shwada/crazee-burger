@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import Logo from "../../reusable-ui/Logo";
 import Profile from "./Profile";
+import { theme } from "../../../theme";
 
 export default function Navbar({ username }) {
   return (
@@ -12,11 +13,12 @@ export default function Navbar({ username }) {
 }
 
 const NavbarStyled = styled.nav`
-  border: 3px solid red;
   height: 10vh;
-  background: green;
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
   padding-right: 50px;
+  background: ${theme.colors.white};
+  border-top-left-radius: ${theme.borderRadius.extraRound};
+  border-top-right-radius: ${theme.borderRadius.extraRound};
 `;
