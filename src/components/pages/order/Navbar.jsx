@@ -6,7 +6,7 @@ export default function Navbar({ username }) {
   return (
     <NavbarStyled>
       <Logo />
-      <Profile />
+      <Profile username={username} />
     </NavbarStyled>
   );
 }
@@ -17,4 +17,6 @@ const NavbarStyled = styled.nav`
   background: green;
   display: flex;
   justify-content: space-between;
+  padding: 0 20px;
+  padding-right: 50px;
 `;
