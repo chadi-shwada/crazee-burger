@@ -19,10 +19,10 @@ const LogoStyled = styled.div`
 
   //style for title
   h1 {
-    display: flex;
+    display: inline;
     font-family: ${theme.fonts.families.stylish};
     text-align: center;
-    font-size: ${theme.fonts.P4};
+    font-size: ${theme.fonts.size.P4};
     letter-spacing: 1.5px;
     line-height: 1em;
     font-weight: ${theme.fonts.weights.bold};
