@@ -23,18 +23,20 @@ export default function Card({ title, imageSource, leftDescription }) {
 
 const CardStyled = styled.div`
   background: ${theme.colors.white};
-  width: 240px;
-  height: 330px;
+  width: 200px;
+  height: 300px;
   display: grid;
   grid-template-rows: 65% 1fr;
-  padding: 20px 20px 10px;
+  padding: 20px;
+  padding-bottom: 10px;
   box-shadow: -8px 8px 20px 0px rgb(0 0 0 / 20%);
   border-radius: ${theme.borderRadius.extraRound};
 
   .image {
     width: 100%;
+    height: auto;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 
     img {
       width: 100%;
@@ -72,7 +74,7 @@ const CardStyled = styled.div`
         justify-content: flex-start;
         align-items: center;
         font-weight: ${theme.fonts.weights.medium};
-        white-space: normal;
+        white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         font-weight: ${theme.fonts.weights.medium};
