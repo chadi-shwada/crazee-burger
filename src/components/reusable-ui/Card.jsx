@@ -1,43 +1,40 @@
 import styled from "styled-components";
-import { theme } from "../../../../theme";
-import PrimaryButton from "../../../reusable-ui/PrimaryButton.jsx";
-import { formatPrice } from "../../../../utils/maths";
+import { theme } from "../../theme";
+import PrimaryButton from "./PrimaryButton";
 
-export default function Product({ title, imageSource, price }) {
+export default function Card({ title, imageSource, leftDescription }) {
   return (
-    <ProductStyled className="produit">
+    <CardStyled className="produit">
       <div className="image">
         <img src={imageSource} alt={title} />
       </div>
       <div className="text-info">
         <div className="title">{title}</div>
         <div className="description">
-          <div className="left-description">{formatPrice(price)}</div>
+          <div className="left-description">{leftDescription}</div>
           <div className="right-description">
             <PrimaryButton className="primary-button" label={"Ajouter"} />
           </div>
         </div>
       </div>
-    </ProductStyled>
+    </CardStyled>
   );
 }
 
-const ProductStyled = styled.div`
+const CardStyled = styled.div`
   background: ${theme.colors.white};
-  width: 200px;
-  height: 300px;
+  width: 240px;
+  height: 330px;
   display: grid;
   grid-template-rows: 65% 1fr;
-  padding: 20px;
-  padding-bottom: 10px;
+  padding: 20px 20px 10px;
   box-shadow: -8px 8px 20px 0px rgb(0 0 0 / 20%);
   border-radius: ${theme.borderRadius.extraRound};
 
   .image {
     width: 100%;
-    height: auto;
     margin-top: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 
     img {
       width: 100%;
@@ -75,7 +72,7 @@ const ProductStyled = styled.div`
         justify-content: flex-start;
         align-items: center;
         font-weight: ${theme.fonts.weights.medium};
-        white-space: nowrap;
+        white-space: normal;
         overflow: hidden;
         text-overflow: ellipsis;
         font-weight: ${theme.fonts.weights.medium};
