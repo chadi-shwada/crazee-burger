@@ -1,8 +1,8 @@
 import { styled } from "styled-components";
-import Logo from "../../reusable-ui/Logo";
+import Logo from "../../../reusable-ui/Logo";
 import Profile from "./Profile";
-import { theme } from "../../../theme";
-import { refreshPage } from "../../../utils/window";
+import { theme } from "../../../../theme";
+import { refreshPage } from "../../../../utils/window";
 
 export default function Navbar({ username, onClick }) {
   return (
@@ -22,6 +22,7 @@ const NavbarStyled = styled.nav`
   background: ${theme.colors.white};
   border-top-left-radius: ${theme.borderRadius.extraRound};
   border-top-right-radius: ${theme.borderRadius.extraRound};
+  border-bottom: 1px solid ${theme.colors.greyLight};
 
   .logo-order-page {
     cursor: pointer;
