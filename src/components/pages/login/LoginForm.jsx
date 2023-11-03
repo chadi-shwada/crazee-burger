@@ -48,7 +48,7 @@ export default function LoginForm() {
 
 // styledComponents
 const LoginFormStyled = styled.form`
-  font-family: ${theme.fonts.families.stylish};
+  font-family: "Amatic SC", cursive;
   max-width: 500px;
   min-width: 400px;
   text-align: center;
@@ -77,7 +77,7 @@ const LoginFormStyled = styled.form`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: ${theme.fonts.size.P0};
+    font-size: ${theme.fonts.size.SM};
     margin-left: 10px;
   }
 `;

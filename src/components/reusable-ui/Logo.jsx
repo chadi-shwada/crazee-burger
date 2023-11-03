@@ -20,7 +20,7 @@ const LogoStyled = styled.div`
   //style for title
   h1 {
     display: inline;
-    font-family: ${theme.fonts.families.stylish};
+    font-family: "Amatic SC", cursive;
     text-align: center;
     font-size: ${theme.fonts.size.P4};
     letter-spacing: 1.5px;
@@ -30,7 +30,6 @@ const LogoStyled = styled.div`
     text-transform: uppercase;
   }
 
-  //style for logo
   img {
     object-fit: contain;
     object-position: center;
