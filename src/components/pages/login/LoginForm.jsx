@@ -48,7 +48,7 @@ export default function LoginForm() {
 
 // styledComponents
 const LoginFormStyled = styled.form`
-  font-family: ${theme.fonts.families.stylish};
+  font-family: "Amatic SC", cursive;
   max-width: 500px;
   min-width: 400px;
   text-align: center;
